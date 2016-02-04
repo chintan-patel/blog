@@ -13,17 +13,17 @@ config = {
     production: {
         url: 'http://www.kashcandi.com',
         mail: {
-	    host: 'email-smtp.us-east-1.amazonaws.com',
-	    transport: 'SMTP',
-	    options: {
-		port: 465,
-		service: 'SES',
-		auth: {
-		    user: 'AKIAJ3LSQH6HWONNA7NQ',
-		    pass: 'x1O6ujOs+jKGVAmhoykLU5FnOrqtG49Q/EdSoFeU'
-	        }
-            }
-	},
+			host: 'email-smtp.us-east-1.amazonaws.com',
+			transport: 'SMTP',
+			options: {
+			port: 465,
+			service: 'SES',
+			auth: {
+				user: 'AKIAJ3LSQH6HWONNA7NQ',
+				pass: 'x1O6ujOs+jKGVAmhoykLU5FnOrqtG49Q/EdSoFeU'
+				}
+			}
+		},
         database: {
             client: 'sqlite3',
             connection: {
@@ -46,6 +46,18 @@ config = {
 
         // Example mail config
         // Visit http://support.ghost.org/mail for instructions
+        mail: {
+			host: 'email-smtp.us-east-1.amazonaws.com',
+			transport: 'SMTP',
+			options: {
+			port: 465,
+			service: 'SES',
+			auth: {
+				user: 'AKIAJ3LSQH6HWONNA7NQ',
+				pass: 'x1O6ujOs+jKGVAmhoykLU5FnOrqtG49Q/EdSoFeU'
+				}
+			}
+		},
         // ```
         //  mail: {
         //      transport: 'SMTP',
