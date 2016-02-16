@@ -2,9 +2,8 @@ language: node_js
 # When changing node version also update it on lines 26, 28 and 38.
 node_js:
     - "0.10"
-    - "0.12"
-    - "~4.2.0"
 before_script:
     - npm install
+    - pip install buster 
 script:
-    - ./node_modules/buster/bin/buster generate --dir ./deployable 
+    - ./scripts/deploy.sh  
