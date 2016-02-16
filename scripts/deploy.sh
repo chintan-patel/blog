@@ -4,3 +4,4 @@ pip install buster
 buster setup --gh-repo=git@github.com:chintan-patel/chintan-patel.github.io.git
 buster generate 
 buster deploy
+pgrep node index | xargs sudo kill
