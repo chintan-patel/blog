@@ -1,8 +1,10 @@
 #!/bin/bash
-DEPLOY_DIR="$HOME/Learn-it/chintan-patel.github.io/"
-buster generate --dir $DEPLOY_DIR 
-cd $DEPLOY_DIR
-pwd
-git add -A
-git commit -m "Generated Blog post"
-git push 
+npm start --production &
+pip install buster
+buster setup --gh-repo=git@github.com:chintan-patel/chintan-patel.github.io.git
+buster generate 
+./node_modules/ghost-sitemap/index.js generate
+./node_modules/ghost-sitemap/index.js ping all 
+cp sitemap/sitemap.xml static/
+buster deploy
+pgrep node index | xargs kill

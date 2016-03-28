@@ -1,0 +1,9 @@
+language: node_js
+# When changing node version also update it on lines 26, 28 and 38.
+node_js:
+    - "0.10"
+before_script:
+    - npm install
+    - pip install buster 
+script:
+    - ./scripts/deploy.sh  
